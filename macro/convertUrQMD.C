@@ -301,7 +301,7 @@ void convertUrQMD(TString inputFileName = "test.f20", TString outputFileName = "
       tree->Fill();
   }
   inputFile.close();
-  header.SetNEvents(eventId);
+  header.SetNEvents(tree->GetEntries());
   header.Write();
   tree->Write();
   outputFile->Close();
